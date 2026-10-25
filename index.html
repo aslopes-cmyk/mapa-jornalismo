@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mapa do jornalismo contemporâneo</title>
+<meta name="description" content="Entidades, programas, financiamento, cursos, eventos e newsletters para quem está começando no jornalismo.">
+<meta property="og:title" content="Mapa do jornalismo contemporâneo">
+<meta property="og:description" content="Entidades, programas, financiamento, cursos, eventos e newsletters para quem está começando no jornalismo.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --ink:#1a1f2b; --muted:#59616e; --line:#e4e6eb;
+  --chip:#f1f2f5; --mark:#ffe45c; --mark-ink:#1a1f2b; --link:#1d4ed8;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#13161c; --ink:#eceef2; --muted:#a3aab6; --line:#2a2f39;
+    --chip:#1d2129; --mark:#e8c93a; --mark-ink:#13161c; --link:#94b3ff;
+    color-scheme: dark;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:140px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6;-webkit-text-size-adjust:100%}
+a{color:var(--link);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--link);outline-offset:2px;border-radius:3px}
+mark{background:var(--mark);color:var(--mark-ink);padding:0 .08em;border-radius:2px}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--bg);padding:8px 12px;z-index:20}
+.skip:focus{left:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Topo */
+header.top{padding:64px 0 32px}
+header.top h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.02em;margin:0 0 20px;max-width:14ch}
+header.top p{margin:0 0 12px;max-width:62ch;color:var(--muted);font-size:1.125rem}
+header.top p strong{color:var(--ink)}
+
+/* Barra de busca e filtros */
+.tools{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);padding:14px 0 12px}
+.search{position:relative}
+.search input{width:100%;font:inherit;font-size:1.125rem;color:var(--ink);background:var(--chip);border:2px solid transparent;border-radius:10px;padding:12px 44px 12px 16px}
+.search input:focus{outline:none;border-color:var(--link);background:var(--bg)}
+.search kbd{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-family:var(--body);font-size:.85rem;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:1px 7px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:12px 0 2px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.chips button{flex:none;font:inherit;font-size:.95rem;color:var(--ink);background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer;white-space:nowrap}
+.chips button:hover{border-color:var(--muted)}
+.chips button[aria-pressed="true"]{background:var(--mark);color:var(--mark-ink);border-color:var(--mark);font-weight:700}
+.status{font-size:.95rem;color:var(--muted);margin:8px 0 0;min-height:1.5em}
+
+/* Seções e itens */
+main{padding-bottom:48px}
+section.cat{padding-top:40px}
+section.cat h2{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,3.4vw,2rem);line-height:1.15;letter-spacing:-.01em;margin:0 0 6px}
+section.cat h2 .n{font-family:var(--body);font-weight:400;font-size:1rem;color:var(--muted);margin-left:8px;letter-spacing:0}
+section.cat .intro{margin:0 0 12px;color:var(--muted);max-width:62ch}
+ul.items{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.item{padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.item h3{font-family:var(--display);font-weight:600;font-size:1.2rem;line-height:1.3;margin:0}
+.item h3 a{color:var(--ink);text-decoration-color:var(--line)}
+.item h3 a:hover{color:var(--link);text-decoration-color:currentColor}
+.item .by{margin:0;font-size:1rem}
+.item .d{margin:2px 0 0;max-width:68ch}
+.item .note{margin:2px 0 0;color:var(--muted);font-size:.975rem;max-width:68ch}
+.ext{font-size:.8em;color:var(--muted);margin-left:.25em}
+.sub{margin:28px 0 0;font-family:var(--display);font-weight:600;font-size:1.15rem}
+
+.empty{padding:48px 0;text-align:left}
+.empty h2{font-family:var(--display);font-size:1.5rem;margin:0 0 8px}
+.empty button{font:inherit;color:var(--link);background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
+
+footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:.95rem}
+footer p{margin:0 0 8px;max-width:68ch}
+
+@media (max-width:560px){
+  header.top{padding:40px 0 24px}
+  .search kbd{display:none}
+  html{scroll-padding-top:170px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+@media print{
+  .tools,.skip{display:none}
+  a{color:inherit}
+  .item h3 a::after{content:" (" attr(href) ")";font-weight:400;font-size:.8em}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="top wrap">
+  <h1>Mapa do jornalismo contemporâneo</h1>
+  <p>Entidades, programas de financiamento, cursos, eventos e newsletters para quem está começando no jornalismo e quer ir além da Redação e da assessoria de imprensa.</p>
+  <p><strong>Busque por nome ou tema</strong> (por exemplo: bolsa, IA, dados, produto) ou filtre por categoria.</p>
+</header>
+
+<div class="tools">
+  <div class="wrap">
+    <div class="search">
+      <label for="q" class="sr">Buscar no mapa</label>
+      <input id="q" type="search" placeholder="Buscar por nome ou tema" autocomplete="off" spellcheck="false">
+      <kbd aria-hidden="true">/</kbd>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Filtrar por categoria"></div>
+    <p class="status" id="status" aria-live="polite"></p>
+  </div>
+</div>
+
+<main id="conteudo" class="wrap" tabindex="-1"></main>
+
+<footer class="wrap">
+  <p>Os links levam a sites externos e abrem em nova aba. Programas, editais e prazos mudam ao longo do ano: confira sempre as informações no site de cada organização.</p>
+  <p>Última atualização: outubro de 2026.</p>
+  <p>Curadoria: Aglisson Lopes.</p>
+  <p>Contribua com o projeto enviando sua sugestão para <a href="mailto:aslopes.lopes@gmail.com?subject=Sugest%C3%A3o%20para%20o%20Mapa%20do%20jornalismo%20contempor%C3%A2neo">aslopes.lopes@gmail.com</a>.</p>
+</footer>
+
+<script>
+const DATA = [
+{id:"brasil", nome:"Entidades brasileiras", intro:"Porta de entrada para redes de contato, formação continuada, defesa profissional e debates sobre o mercado no Brasil.", itens:[
+ {t:"Abraji", u:"https://www.abraji.org.br", d:"Associação Brasileira de Jornalismo Investigativo: investigação, acesso à informação e segurança de profissionais.", n:"Congresso anual, cursos, monitoramento de agressões a jornalistas e Projeto Comprova."},
+ {t:"Ajor", u:"https://ajor.org.br", d:"Associação de Jornalismo Digital, que reúne veículos nativos digitais e independentes.", n:"Programas de aceleração, Festival 3i e debates sobre sustentabilidade de pequenos veículos."},
+ {t:"Fenaj", u:"https://fenaj.org.br", d:"Federação Nacional dos Jornalistas, entidade sindical nacional da categoria.", n:"Código de Ética, relatório anual de violência contra jornalistas e direitos trabalhistas."},
+ {t:"Sindijornalistas-ES", u:"https://sindijornalistases.org.br/", d:"Sindicato dos jornalistas do Espírito Santo.", n:"Piso salarial, registro profissional e rede local."},
+ {t:"ABI", u:"https://www.abi.org.br", d:"Associação Brasileira de Imprensa, entidade histórica de defesa da liberdade de imprensa.", n:"Debates institucionais e defesa da profissão."},
+ {t:"ANJ", u:"https://www.anj.org.br", d:"Associação Nacional de Jornais, que representa empresas jornalísticas.", n:"Visão do mercado, liberdade de imprensa e regulação de plataformas."},
+ {t:"Abert", u:"https://www.abert.org.br", d:"Associação Brasileira de Emissoras de Rádio e Televisão.", n:"Panorama do setor de radiodifusão."},
+ {t:"Projor", u:"https://www.projor.org.br", d:"Instituto para o Desenvolvimento do Jornalismo, que mantém o Observatório da Imprensa e o Atlas da Notícia.", n:"Pesquisa e crítica de mídia."},
+ {t:"Observatório da Imprensa", u:"https://www.observatoriodaimprensa.com.br", d:"Publicação de crítica de mídia mantida pelo Projor.", n:"Acompanhar o debate sobre a cobertura jornalística no Brasil."},
+ {t:"Atlas da Notícia", u:"https://www.atlas.jor.br", d:"Mapeamento de desertos de notícia no Brasil, feito pelo Projor.", n:"Ótimo para encontrar nichos e regiões sem cobertura local."},
+ {t:"Instituto Vladimir Herzog", u:"https://vladimirherzog.org", d:"Memória, direitos humanos e jornalismo.", n:"Prêmio Vladimir Herzog e prêmio para jovens jornalistas."},
+ {t:"Instituto Palavra Aberta", u:"https://www.palavraaberta.org.br", d:"Educação midiática e liberdade de expressão.", n:"Debates sobre desinformação e educação para a mídia."},
+ {t:"Artigo 19 Brasil", u:"https://artigo19.org", d:"ONG internacional de liberdade de expressão e acesso à informação.", n:"Relatórios sobre Lei de Acesso à Informação e proteção de comunicadores."},
+ {t:"Repórteres Sem Fronteiras (RSF)", u:"https://rsf.org/pt-br", d:"ONG internacional com escritório para a América Latina no Brasil.", n:"Ranking Mundial de Liberdade de Imprensa."},
+ {t:"SBPJor", u:"https://sbpjor.org.br", d:"Associação Brasileira de Pesquisadores em Jornalismo.", n:"Para quem pensa em mestrado ou pesquisa aplicada."},
+ {t:"Intercom", u:"https://www.portalintercom.org.br", d:"Sociedade Brasileira de Estudos Interdisciplinares da Comunicação.", n:"Congressos e prêmios para estudantes e recém-formados."},
+ {t:"Aberje", u:"https://www.aberje.com.br", d:"Associação Brasileira de Comunicação Empresarial.", n:"Para quem vai para assessoria e comunicação corporativa."},
+ {t:"Rede de Jornalistas Pretos pela Diversidade na Comunicação", u:"https://redejpcomunicacao.org/", d:"Rede de profissionais negros da comunicação.", n:"Diversidade nas Redações, mentorias e vagas."},
+ {t:"Fiquem Sabendo", u:"https://fiquemsabendo.com.br", d:"Agência especializada em Lei de Acesso à Informação.", n:"Dados públicos obtidos via LAI e newsletter Don’t LAI to Me."},
+ {t:"Open Knowledge Brasil", u:"https://ok.org.br", d:"Organização dedicada a dados abertos e transparência.", n:"Projetos e comunidade de dados abertos."},
+ {t:"Escola de Dados", u:"https://escoladedados.org", d:"Programa de formação em jornalismo de dados da Open Knowledge Brasil.", n:"Cursos, oficinas e a conferência Coda.Br."},
+ {t:"Agência Lupa", u:"https://www.agencialupa.org/", d:"Agência de checagem de fatos.", n:"Referência em verificação e combate à desinformação."},
+ {t:"Aos Fatos", u:"https://www.aosfatos.org", d:"Plataforma de checagem de fatos e jornalismo investigativo.", n:"Referência em verificação e ferramentas contra desinformação."},
+ {t:"Projeto Comprova", u:"https://projetocomprova.com.br", d:"Coalizão de veículos para verificação colaborativa, coordenada pela Abraji.", n:"Exemplo de jornalismo colaborativo de checagem."}
+]},
+{id:"internacional", nome:"Organizações internacionais", intro:"As fontes que pautam o debate global sobre o futuro do jornalismo. Muitas têm conteúdo em português ou espanhol.", itens:[
+ {t:"ICFJ (International Center for Journalists)", u:"https://www.icfj.org", d:"Organização dos EUA que apoia jornalistas no mundo todo.", n:"Knight Fellowships, programas de inovação e treinamentos."},
+ {t:"IJNet (Rede de Jornalistas Internacionais)", u:"https://ijnet.org/pt-br", d:"Portal do ICFJ com versão em português.", n:"Agenda de bolsas, prêmios e cursos, além de dicas práticas."},
+ {t:"Knight Center for Journalism in the Americas", u:"https://knightcenter.utexas.edu", d:"Centro de formação para jornalistas das Américas, na Universidade do Texas.", n:"Cursos online gratuitos em português e o site LatAm Journalism Review."},
+ {t:"Reuters Institute for the Study of Journalism", u:"https://reutersinstitute.politics.ox.ac.uk", d:"Centro de pesquisa sobre jornalismo da Universidade de Oxford.", n:"Digital News Report anual, com dados do Brasil."},
+ {t:"Nieman Lab", u:"https://www.niemanlab.org", d:"Publicação da Universidade Harvard sobre o futuro do jornalismo.", n:"Tendências, experimentos e previsões anuais."},
+ {t:"Poynter Institute", u:"https://www.poynter.org", d:"Escola e centro de referência em ética e prática jornalística.", n:"Cursos, guias de ética e sede da IFCN."},
+ {t:"IFCN (International Fact-Checking Network)", u:"https://www.poynter.org/ifcn/", d:"Rede mundial de checadores, ligada ao Poynter.", n:"Código de princípios da checagem e bolsas."},
+ {t:"GIJN (Global Investigative Journalism Network)", u:"https://gijn.org", d:"Rede global de jornalismo investigativo.", n:"Guias, ferramentas e conferência global, com conteúdo em português."},
+ {t:"WAN-IFRA", u:"https://wan-ifra.org", d:"Associação Mundial de Editores de Notícias.", n:"Relatórios de negócio e programas para Redações."},
+ {t:"INMA (International News Media Association)", u:"https://www.inma.org", d:"Associação focada em negócio, receita e produto.", n:"Cases de assinatura, audiência e produto."},
+ {t:"ONA (Online News Association)", u:"https://journalists.org", d:"Associação de jornalistas digitais.", n:"Conferência anual e comunidade de inovação."},
+ {t:"Committee to Protect Journalists (CPJ)", u:"https://cpj.org", d:"ONG de defesa de jornalistas.", n:"Segurança e casos de violência contra jornalistas."},
+ {t:"European Journalism Centre (EJC)", u:"https://ejc.net", d:"Centro europeu de apoio ao jornalismo.", n:"Bolsas de inovação e programas de formação."},
+ {t:"DataJournalism.com", u:"https://datajournalism.com", d:"Plataforma de jornalismo de dados do European Journalism Centre.", n:"Cursos em vídeo gratuitos."},
+ {t:"Fundación Gabo", u:"https://fundaciongabo.org", d:"Fundação latino-americana criada por Gabriel García Márquez.", n:"Oficinas, Festival e Prêmio Gabo."},
+ {t:"DW Akademie", u:"https://akademie.dw.com", d:"Braço de desenvolvimento de mídia da Deutsche Welle.", n:"Programas de formação e viabilidade de mídia."},
+ {t:"Thomson Reuters Foundation", u:"https://www.trust.org", d:"Fundação ligada à agência Reuters.", n:"Treinamentos e cursos online gratuitos."},
+ {t:"Tow Center for Digital Journalism", u:"https://towcenter.columbia.edu", d:"Centro de pesquisa da Universidade Columbia sobre jornalismo e tecnologia.", n:"Estudos sobre plataformas, IA e jornalismo."},
+ {t:"American Press Institute (API)", u:"https://americanpressinstitute.org", d:"Instituto de pesquisa e boas práticas.", n:"Estudos sobre audiência e confiança."},
+ {t:"Pulitzer Center", u:"https://pulitzercenter.org", d:"Organização que financia reportagens.", n:"Bolsas de reportagem, inclusive para freelancers."},
+ {t:"Hacks/Hackers", u:"https://www.hackshackers.com", d:"Rede que une jornalistas e tecnologistas.", n:"Encontros sobre tecnologia, IA e mídia."}
+]},
+{id:"produto", nome:"Produto digital, audiência e inovação", intro:"Produto digital absorve cada vez mais jornalistas: gestão de produto, SEO, audiência, newsletters, dados e experiência do usuário.", itens:[
+ {t:"News Product Alliance (NPA)", u:"https://newsproduct.org", d:"Comunidade global de profissionais de produto em notícias.", n:"Cursos introdutórios, kit de ferramentas, bolsas e conferência."},
+ {t:"Blue Engine Collaborative", u:"https://www.blueenginecollaborative.com/", d:"Consultoria e comunidade sobre desenvolvimento de audiência e negócio.", n:"Programas e materiais sobre receita de leitores e crescimento."},
+ {t:"Google News Initiative (GNI)", u:"https://newsinitiative.withgoogle.com/pt-br/", d:"Braço do Google dedicado ao jornalismo.", n:"Training Center gratuito, programas de inovação e de startups."},
+ {t:"INMA", u:"https://www.inma.org", d:"Associação global de mídia.", n:"Iniciativas de produto e de receita de leitores."},
+ {t:"WAN-IFRA", u:"https://wan-ifra.org", d:"Associação global de editores.", n:"Programas Table Stakes e de aceleração de negócio."},
+ {t:"Lenfest Institute", u:"https://www.lenfestinstitute.org", d:"Instituto dos EUA dedicado ao jornalismo local.", n:"Pesquisas e experimentos sobre negócio e produto."},
+ {t:"Center for Cooperative Media", u:"https://centerforcooperativemedia.org", d:"Centro da Montclair State University sobre colaboração e mídia local.", n:"Guias sobre colaboração entre veículos."},
+ {t:"Splice Media", u:"https://www.splicemedia.com", d:"Iniciativa asiática de apoio a startups de mídia.", n:"Conteúdo prático sobre pequenos negócios de mídia."},
+ {t:"Solutions Journalism Network (SJN)", u:"https://www.solutionsjournalism.org", d:"Organização que promove o jornalismo de soluções.", n:"Cursos, guias e programas que aproximam conteúdo e engajamento."},
+ {t:"Digital Content Next", u:"https://digitalcontentnext.org", d:"Associação de publishers digitais.", n:"Pesquisas sobre audiência e mercado."}
+]},
+{id:"ia", nome:"Inteligência artificial e jornalismo", intro:"A IA já muda rotinas de apuração, edição e distribuição. Estas fontes ajudam a entender usos responsáveis, riscos e oportunidades.", itens:[
+ {t:"JournalismAI (Polis/LSE)", u:"https://www.journalismai.info", d:"Projeto da London School of Economics sobre IA em Redações.", n:"Fellowship, cursos gratuitos e coleção de cases."},
+ {t:"Reuters Institute", u:"https://reutersinstitute.politics.ox.ac.uk", d:"Pesquisas anuais sobre IA, público e Redações.", n:"Dados sobre como o público percebe notícias feitas com IA."},
+ {t:"Knight Center (cursos)", u:"https://journalismcourses.org", d:"Cursos online sobre IA para jornalistas.", n:"Formação gratuita em português e espanhol."},
+ {t:"Poynter Institute", u:"https://www.poynter.org", d:"Guias de ética e modelos de políticas de uso de IA.", n:"Referência para políticas internas."},
+ {t:"Google News Initiative", u:"https://newsinitiative.withgoogle.com/pt-br/", d:"Treinamentos sobre ferramentas de IA para jornalismo.", n:"Cursos práticos de uso das ferramentas."},
+ {t:"Tow Center (Columbia)", u:"https://towcenter.columbia.edu", d:"Pesquisas sobre IA, plataformas e jornalismo.", n:"Análises críticas sobre o impacto da IA no setor."},
+ {t:"Nieman Lab", u:"https://www.niemanlab.org", d:"Cobertura constante de experimentos com IA.", n:"Acompanhar o que as Redações estão testando."}
+]},
+{id:"independente", nome:"Jornalismo independente e de nicho", intro:"Para quem quer atuar sozinho ou em pequenos grupos: mapeamentos, metodologias de negócio e redes de apoio.", itens:[
+ {t:"Ajor", u:"https://ajor.org.br", d:"Associação de veículos nativos digitais no Brasil.", n:"Rede de apoio, aceleração e pesquisas sobre o setor."},
+ {t:"SembraMedia", u:"https://www.sembramedia.org", d:"Organização que apoia mídia digital nativa na América Latina.", n:"Diretório de veículos, estudo Ponto de Inflexão e programas de aceleração."},
+ {t:"Mapa do Jornalismo Independente", u:"https://apublica.org/mapa-do-jornalismo/", d:"Levantamento da Agência Pública sobre iniciativas independentes no Brasil.", n:"Inspiração e mapeamento de nichos já explorados."},
+ {t:"Atlas da Notícia", u:"https://www.atlas.jor.br", d:"Mapeamento de desertos de notícia no país.", n:"Encontrar territórios sem cobertura local."},
+ {t:"LION Publishers", u:"https://lionpublishers.com", d:"Associação de veículos locais independentes nos EUA.", n:"Guias práticos sobre como abrir e sustentar um veículo."},
+ {t:"INN (Institute for Nonprofit News)", u:"https://inn.org", d:"Rede de veículos sem fins lucrativos nos EUA.", n:"Modelos de financiamento e governança."},
+ {t:"Énois", u:"https://enois.org/", d:"Escola e laboratório de jornalismo em São Paulo.", n:"Programas de diversidade, jornalismo local e formação de jovens."},
+ {t:"Splice Media", u:"https://www.splicemedia.com", d:"Iniciativa de apoio a startups de mídia.", n:"Conteúdo sobre pequenos negócios jornalísticos."},
+ {t:"Membership Puzzle Project (arquivo)", u:"https://membershippuzzle.org", d:"Projeto de pesquisa, já encerrado, sobre modelos de membership.", n:"O acervo segue útil para quem quer viver do apoio do leitor."}
+], exemplos:{titulo:"Exemplos brasileiros para estudar", itens:[
+ {t:"Meio", u:"https://www.canalmeio.com.br", d:"Negócio jornalístico construído a partir de uma newsletter diária."},
+ {t:"Núcleo Jornalismo", u:"https://nucleo.jor.br", d:"Jornalismo sobre tecnologia, plataformas e internet."},
+ {t:"Agência Mural", u:"https://www.agenciamural.org.br", d:"Jornalismo feito nas periferias da Grande São Paulo."},
+ {t:"Gênero e Número", u:"https://www.generonumero.media", d:"Jornalismo de dados sobre gênero e raça."},
+ {t:"Agência Pública", u:"https://apublica.org", d:"Jornalismo investigativo sem fins lucrativos."},
+ {t:"Fiquem Sabendo", u:"https://fiquemsabendo.com.br", d:"Agência especializada em Lei de Acesso à Informação."},
+ {t:"Nexo", u:"https://www.nexojornal.com.br", d:"Jornal digital de explicação e contexto, sustentado por assinaturas."}
+]}},
+{id:"financiamento", nome:"Financiamento, bolsas e prêmios", intro:"Há dinheiro disponível para projetos jornalísticos, inclusive para jovens profissionais. Editais abrem e fecham ao longo do ano: o IJNet e o Knight Center costumam reunir as oportunidades abertas.", itens:[
+ {t:"Microbolsas de reportagem", by:"Agência Pública", u:"https://apublica.org", d:"Recurso para reportagens investigativas.", n:"Indicado para jornalistas independentes e freelancers."},
+ {t:"Bolsas de reportagem", by:"Pulitzer Center", u:"https://pulitzercenter.org", d:"Financiamento de reportagens, inclusive sobre meio ambiente e IA.", n:"Indicado para freelancers e jornalistas de qualquer país."},
+ {t:"Programas de inovação e startups", by:"Google News Initiative", u:"https://newsinitiative.withgoogle.com/pt-br/", d:"Recursos, mentoria e aceleração.", n:"Indicado para veículos e projetos digitais."},
+ {t:"Knight Fellowships e programas de inovação", by:"ICFJ", u:"https://www.icfj.org", d:"Bolsas, mentorias e projetos de impacto.", n:"Indicado para jornalistas com projeto de inovação."},
+ {t:"JournalismAI Fellowship e Innovation Challenge", by:"JournalismAI (LSE)", u:"https://www.journalismai.info", d:"Programa colaborativo e recursos para projetos com IA.", n:"Indicado para jornalistas e tecnologistas em Redações."},
+ {t:"Bolsas e programas da NPA", by:"News Product Alliance", u:"https://newsproduct.org", d:"Bolsas para cursos e eventos de produto.", n:"Indicado para quem quer migrar para produto."},
+ {t:"Programas de aceleração", by:"Ajor", u:"https://ajor.org.br", d:"Mentoria e apoio para sustentabilidade.", n:"Indicado para veículos nativos digitais e independentes."},
+ {t:"Programas de aceleração", by:"SembraMedia", u:"https://www.sembramedia.org", d:"Mentoria e apoio para sustentabilidade.", n:"Indicado para veículos digitais da América Latina."},
+ {t:"Prêmio Jovem Jornalista Fernando Pacheco Jordão", by:"Instituto Vladimir Herzog", u:"https://vladimirherzog.org", d:"Prêmio e apoio para produzir uma reportagem.", n:"Indicado para estudantes e jovens jornalistas."},
+ {t:"Prêmio Vladimir Herzog", by:"Instituto Vladimir Herzog", u:"https://vladimirherzog.org", d:"Prêmio de jornalismo e direitos humanos.", n:"Indicado para repórteres em geral."},
+ {t:"Prêmio Gabo", by:"Fundación Gabo", u:"https://fundaciongabo.org", d:"Prêmio internacional de jornalismo.", n:"Aceita trabalhos em português e espanhol."},
+ {t:"Programa de jornalismo científico", by:"Instituto Serrapilheira", u:"https://serrapilheira.org", d:"Apoio a projetos de divulgação e jornalismo de ciência.", n:"Indicado para jornalistas de ciência."},
+ {t:"Bolsas de checagem", by:"IFCN", u:"https://www.poynter.org/ifcn/", d:"Recursos para projetos de verificação.", n:"Indicado para iniciativas de checagem."},
+ {t:"Reuters Institute Journalist Fellowship", by:"Universidade de Oxford", u:"https://reutersinstitute.politics.ox.ac.uk", d:"Período de pesquisa em Oxford.", n:"Indicado para jornalistas com alguns anos de experiência."},
+ {t:"Nieman Fellowship", by:"Universidade Harvard", u:"https://nieman.harvard.edu", d:"Um ano de estudos em Harvard.", n:"Indicado para jornalistas com experiência consolidada."},
+ {t:"Prêmios Expocom", by:"Intercom", u:"https://www.portalintercom.org.br", d:"Prêmios para trabalhos experimentais.", n:"Indicado para estudantes e recém-formados."},
+ {t:"Apoio a organizações jornalísticas", by:"Knight Foundation", u:"https://knightfoundation.org", d:"Fundação que financia jornalismo e informação local.", n:"Costuma financiar organizações, não pessoas físicas."},
+ {t:"Apoio a organizações jornalísticas", by:"Open Society Foundations", u:"https://www.opensocietyfoundations.org", d:"Fundação que apoia mídia independente e direitos.", n:"Costuma financiar organizações, não pessoas físicas."},
+ {t:"Apoio a organizações jornalísticas", by:"Ford Foundation", u:"https://www.fordfoundation.org", d:"Fundação que apoia iniciativas de justiça social, incluindo mídia.", n:"Costuma financiar organizações, não pessoas físicas."}
+]},
+{id:"cursos", nome:"Formação e cursos", intro:"A maior parte destes cursos é gratuita e online, o que facilita a atualização contínua depois da graduação.", itens:[
+ {t:"Knight Center for Journalism in the Americas", u:"https://journalismcourses.org", d:"Dados, IA, checagem, investigação e newsletters.", n:"Cursos online gratuitos, muitos em português."},
+ {t:"Google News Initiative Training Center", u:"https://newsinitiative.withgoogle.com/pt-br/", d:"Pesquisa, verificação, dados, ferramentas Google e IA.", n:"Lições curtas e certificados."},
+ {t:"Escola de Dados", u:"https://escoladedados.org", d:"Jornalismo de dados, raspagem e visualização.", n:"Cursos, oficinas e Coda.Br."},
+ {t:"Abraji", u:"https://www.abraji.org.br", d:"Investigação, Lei de Acesso, segurança e cobertura eleitoral.", n:"Cursos online e presenciais."},
+ {t:"JournalismAI (LSE)", u:"https://www.journalismai.info", d:"IA aplicada ao jornalismo.", n:"Curso introdutório gratuito."},
+ {t:"News Product Alliance", u:"https://newsproduct.org", d:"Fundamentos de produto digital.", n:"Cursos e materiais de referência."},
+ {t:"Solutions Journalism Network", u:"https://www.solutionsjournalism.org", d:"Jornalismo de soluções.", n:"Cursos e guias gratuitos."},
+ {t:"Poynter (News University)", u:"https://www.poynter.org", d:"Ética, edição e checagem.", n:"Cursos online, parte gratuita."},
+ {t:"Thomson Reuters Foundation", u:"https://www.trust.org", d:"Reportagem, segurança e cobertura de temas sociais.", n:"Cursos online gratuitos."},
+ {t:"DataJournalism.com", u:"https://datajournalism.com", d:"Jornalismo de dados.", n:"Cursos em vídeo gratuitos."},
+ {t:"Énois", u:"https://enois.org/", d:"Jornalismo local, diversidade e inovação.", n:"Programas e laboratórios."}
+]},
+{id:"eventos", nome:"Eventos e congressos", intro:"O melhor lugar para fazer contatos e ouvir quem está testando coisas novas. Vários têm transmissão online ou gravações gratuitas.", itens:[
+ {t:"Congresso Internacional de Jornalismo Investigativo", by:"Abraji", u:"https://www.abraji.org.br", d:"Investigação, dados, segurança e tendências."},
+ {t:"Festival 3i", by:"Ajor", u:"https://ajor.org.br", d:"Jornalismo inovador, inspirador e independente."},
+ {t:"Coda.Br", by:"Escola de Dados / Open Knowledge Brasil", u:"https://escoladedados.org", d:"Conferência brasileira de jornalismo de dados."},
+ {t:"Congresso Intercom", by:"Intercom", u:"https://www.portalintercom.org.br", d:"Pesquisa em Comunicação e prêmios Expocom."},
+ {t:"Encontro da SBPJor", by:"SBPJor", u:"https://sbpjor.org.br", d:"Pesquisa em jornalismo."},
+ {t:"Festival Gabo", by:"Fundación Gabo", u:"https://fundaciongabo.org", d:"Jornalismo latino-americano."},
+ {t:"International Journalism Festival", by:"Festival independente em Perugia, Itália", u:"https://www.journalismfestival.com", d:"Debates globais, com muitas sessões gravadas e abertas."},
+ {t:"ONA Conference", by:"Online News Association", u:"https://journalists.org", d:"Inovação digital."},
+ {t:"Global Investigative Journalism Conference", by:"GIJN", u:"https://gijn.org", d:"Investigação em escala global."},
+ {t:"World News Media Congress", by:"WAN-IFRA", u:"https://wan-ifra.org", d:"Negócios e liderança em mídia."},
+ {t:"INMA World Congress", by:"INMA", u:"https://www.inma.org", d:"Receita, produto e audiência."},
+ {t:"GlobalFact", by:"IFCN", u:"https://www.poynter.org/ifcn/", d:"Encontro mundial de checagem de fatos."}
+]},
+{id:"newsletters", nome:"Newsletters", intro:"Assinar de três a cinco newsletters já resolve boa parte da atualização. Combine uma brasileira, uma de tendências globais e uma de área específica.", itens:[
+ {t:"Farol Jornalismo", u:"https://www.faroljornalismo.cc", d:"Curadoria semanal sobre jornalismo, plataformas e inovação.", n:"Em português."},
+ {t:"IJNet em português", u:"https://ijnet.org/pt-br", d:"Oportunidades de bolsas, cursos e dicas práticas.", n:"Em português."},
+ {t:"LatAm Journalism Review", u:"https://latamjournalismreview.org/pt-br/", d:"Jornalismo na América Latina, do Knight Center.", n:"Em português, espanhol e inglês."},
+ {t:"Newsletter da Abraji", u:"https://www.abraji.org.br", d:"Cursos, eventos e liberdade de imprensa.", n:"Em português."},
+ {t:"Newsletter da Ajor", u:"https://ajor.org.br", d:"Jornalismo digital independente no Brasil.", n:"Em português."},
+ {t:"Núcleo Jornalismo", u:"https://nucleo.jor.br", d:"Tecnologia, plataformas e internet.", n:"Em português."},
+ {t:"Don’t LAI to Me (Fiquem Sabendo)", u:"https://fiquemsabendo.com.br", d:"Dados públicos obtidos via Lei de Acesso à Informação.", n:"Em português."},
+ {t:"Jornalistas&Cia", u:"https://www.jornalistasecia.com.br", d:"Movimentações do mercado e das Redações.", n:"Em português."},
+ {t:"Meio", u:"https://www.canalmeio.com.br", d:"Exemplo de negócio jornalístico baseado em newsletter.", n:"Em português."},
+ {t:"News Alchemists (Mattia Peretti)", u:"https://www.newsalchemists.com/author/mattia/", d:"Inovação, IA e futuro das Redações, por quem liderou o JournalismAI na LSE.", n:"Em inglês."},
+ {t:"Baekdal (Thomas Baekdal)", u:"https://www.baekdal.com", d:"Análises aprofundadas sobre estratégia de mídia, modelos de negócio e audiência.", n:"Em inglês."},
+ {t:"The Audiencers", u:"https://theaudiencers.com", d:"Desenvolvimento de audiência, engajamento e assinaturas, com cases de veículos do mundo todo.", n:"Em inglês."},
+ {t:"Nieman Lab", u:"https://www.niemanlab.org", d:"Futuro do jornalismo, diária.", n:"Em inglês."},
+ {t:"Reuters Institute", u:"https://reutersinstitute.politics.ox.ac.uk", d:"Pesquisa e tendências semanais.", n:"Em inglês."},
+ {t:"Poynter", u:"https://www.poynter.org", d:"Ética, mídia e checagem.", n:"Em inglês."},
+ {t:"Press Gazette", u:"https://pressgazette.co.uk", d:"Negócio e mercado de mídia.", n:"Em inglês."},
+ {t:"What’s New in Publishing (WNIP)", u:"https://whatsnewinpublishing.com", d:"Tendências de negócio e produto.", n:"Em inglês."},
+ {t:"The Fix", u:"https://thefix.media", d:"Mídia europeia e modelos de negócio.", n:"Em inglês."},
+ {t:"The Rebooting (Brian Morrissey)", u:"https://www.therebooting.com", d:"Negócio de mídia digital.", n:"Em inglês."},
+ {t:"Simon Owens’s Media Newsletter", u:"https://simonowens.substack.com", d:"Estratégias de crescimento para mídia independente.", n:"Em inglês."},
+ {t:"JournalismAI", u:"https://www.journalismai.info", d:"IA em Redações.", n:"Em inglês."},
+ {t:"News Product Alliance", u:"https://newsproduct.org", d:"Produto digital em notícias.", n:"Em inglês."},
+ {t:"GIJN", u:"https://gijn.org", d:"Ferramentas e guias de investigação.", n:"Em inglês e português."},
+ {t:"Solutions Journalism Network", u:"https://www.solutionsjournalism.org", d:"Jornalismo de soluções.", n:"Em inglês."},
+ {t:"Platformer (Casey Newton)", u:"https://www.platformer.news", d:"Big tech; exemplo de jornalista solo que vive de assinatura.", n:"Em inglês."}
+]}
+];
+
+/* ---------- Utilidades ---------- */
+const fold = s => s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const esc = s => s.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+// Destaca os termos buscados sem depender de acentos
+function hl(text, terms){
+  if(!terms.length) return esc(text);
+  let norm = "", map = [];
+  for(let i=0;i<text.length;i++){
+    const f = fold(text[i]);
+    for(let k=0;k<f.length;k++){ norm += f[k]; map.push(i); }
+  }
+  const marks = new Array(text.length).fill(false);
+  terms.forEach(t=>{
+    let from = 0, idx;
+    while((idx = norm.indexOf(t, from)) !== -1){
+      for(let j=idx;j<idx+t.length;j++) marks[map[j]] = true;
+      from = idx + t.length;
+    }
+  });
+  let out = "", open = false;
+  for(let i=0;i<text.length;i++){
+    if(marks[i] && !open){ out += "<mark>"; open = true; }
+    if(!marks[i] && open){ out += "</mark>"; open = false; }
+    out += esc(text[i]);
+  }
+  return open ? out + "</mark>" : out;
+}
+
+const EXT = '<span class="ext" aria-hidden="true">↗</span><span class="sr"> (abre em nova aba)</span>';
+function link(url, inner){
+  return `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${inner}${EXT}</a>`;
+}
+
+function itemHTML(it, terms){
+  const title = it.by
+    ? `<h3>${hl(it.t, terms)}</h3><p class="by">${link(it.u, hl(it.by, terms))}</p>`
+    : `<h3>${link(it.u, hl(it.t, terms))}</h3>`;
+  return `<li class="item">${title}<p class="d">${hl(it.d, terms)}</p>${it.n ? `<p class="note">${hl(it.n, terms)}</p>` : ""}</li>`;
+}
+
+const matches = (it, terms) => {
+  const hay = fold([it.t, it.by||"", it.d, it.n||""].join(" "));
+  return terms.every(t => hay.includes(t));
+};
+
+/* ---------- Estado e renderização ---------- */
+const state = { cat: "todas", q: "" };
+const main = document.getElementById("conteudo");
+const chips = document.getElementById("chips");
+const status = document.getElementById("status");
+const input = document.getElementById("q");
+
+const total = DATA.reduce((n,s)=> n + s.itens.length + (s.exemplos ? s.exemplos.itens.length : 0), 0);
+
+function renderChips(){
+  const opts = [{id:"todas", nome:"Todas"}, ...DATA];
+  chips.innerHTML = opts.map(o =>
+    `<button type="button" data-cat="${o.id}" aria-pressed="${state.cat===o.id}">${esc(o.nome)}</button>`
+  ).join("");
+}
+
+function render(){
+  const terms = fold(state.q).split(/\s+/).filter(Boolean);
+  let shown = 0, html = "";
+  DATA.forEach(sec => {
+    if(state.cat !== "todas" && state.cat !== sec.id) return;
+    const its = sec.itens.filter(it => matches(it, terms));
+    const ex = sec.exemplos ? sec.exemplos.itens.filter(it => matches(it, terms)) : [];
+    const count = its.length + ex.length;
+    if(!count) return;
+    shown += count;
+    html += `<section class="cat" id="${sec.id}" aria-labelledby="h-${sec.id}">
+      <h2 id="h-${sec.id}">${esc(sec.nome)}<span class="n">${count} ${count===1?"item":"itens"}</span></h2>
+      ${terms.length ? "" : `<p class="intro">${esc(sec.intro)}</p>`}
+      ${its.length ? `<ul class="items">${its.map(it=>itemHTML(it, terms)).join("")}</ul>` : ""}
+      ${ex.length ? `<p class="sub">${esc(sec.exemplos.titulo)}</p><ul class="items">${ex.map(it=>itemHTML(it, terms)).join("")}</ul>` : ""}
+    </section>`;
+  });
+  if(!shown){
+    html = `<div class="empty"><h2>Nada encontrado para “${esc(state.q)}”</h2>
+      <p>Tente outra palavra, como “bolsa”, “dados” ou “IA”, ou <button type="button" id="limpar">limpe a busca e os filtros</button>.</p></div>`;
+  }
+  main.innerHTML = html;
+  const filtrando = terms.length || state.cat !== "todas";
+  status.textContent = filtrando
+    ? `${shown} de ${total} itens`
+    : `${total} itens em ${DATA.length} categorias`;
+  const b = document.getElementById("limpar");
+  if(b) b.addEventListener("click", reset);
+}
+
+function reset(){
+  state.q = ""; state.cat = "todas"; input.value = "";
+  renderChips(); render(); syncURL(); input.focus();
+}
+
+/* Mantém busca e categoria no endereço, para compartilhar o link de um filtro */
+function syncURL(){
+  const p = new URLSearchParams();
+  if(state.q) p.set("q", state.q);
+  if(state.cat !== "todas") p.set("cat", state.cat);
+  const qs = p.toString();
+  history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
+}
+
+function readURL(){
+  const p = new URLSearchParams(location.search);
+  state.q = p.get("q") || "";
+  const c = p.get("cat");
+  state.cat = DATA.some(s=>s.id===c) ? c : "todas";
+  input.value = state.q;
+}
+
+let timer;
+input.addEventListener("input", () => {
+  clearTimeout(timer);
+  timer = setTimeout(() => { state.q = input.value.trim(); render(); syncURL(); }, 120);
+});
+input.addEventListener("keydown", e => {
+  if(e.key === "Escape" && input.value){ input.value = ""; state.q = ""; render(); syncURL(); }
+});
+
+chips.addEventListener("click", e => {
+  const b = e.target.closest("button[data-cat]");
+  if(!b) return;
+  state.cat = (state.cat === b.dataset.cat && b.dataset.cat !== "todas") ? "todas" : b.dataset.cat;
+  renderChips(); render(); syncURL();
+  const pressed = chips.querySelector('[aria-pressed="true"]');
+  if(pressed) pressed.scrollIntoView({block:"nearest", inline:"nearest"});
+});
+
+document.addEventListener("keydown", e => {
+  if(e.key === "/" && document.activeElement !== input && !e.metaKey && !e.ctrlKey){
+    e.preventDefault(); input.focus();
+  }
+});
+
+readURL(); renderChips(); render();
+</script>
+</body>
+</html>
